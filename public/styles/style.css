@@ -1,0 +1,237 @@
+/* GENERAL */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+/* INDEX PAGE */
+.index-page {
+  background: url(/images/spotify-background.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-div {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  height: 26%;
+  min-width: 45rem;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+input {
+  border: 0.1em solid whitesmoke;
+  border-radius: 0.3em;
+  min-width: 35em;
+  height: 3em;
+}
+
+input:focus {
+  outline: none;
+  border:0.1em solid #1DB954;
+  box-shadow: 0 0 0.3em grey;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  padding-left: 0.7em;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transform: translateY(0.1em);
+}
+
+button{
+  background-color: #FA6863;
+  color: white;
+  border: none;
+  min-width: 10.5em;
+  min-height: 2.3em;
+  font-size: 1.1rem;
+  border-radius: 0.1em;
+  min-width: 10em;
+  height: 2em;
+  margin: 0.7em 9rem;
+}
+
+.main-search {
+  margin-top: 3em;
+}
+
+
+/* ARTISTS PAGE */
+.body-artists {
+  margin: 3rem;
+}
+
+.cards {
+  display: grid;
+  gap: 4rem;
+  grid-auto-rows: 25rem;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+}
+
+.card {
+  min-height: 28.5em;
+  background-color: #4d4d4d;
+  border-radius: 0.8em;  
+  box-shadow: 0.3em 0.3em 0.7em rgba(0, 0, 0, 0.5);
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0.3em 0.3em 0.7em rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 75%;
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 0.8em;
+}
+
+.card-text p {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: white;
+  margin: 1em 0.7em;
+  padding-top: 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link-albums {
+  text-align: center;
+  background-color: #ef6867;
+  color: white;
+  padding: 0.3em 0;
+  margin: 0 5.5em;
+  border-radius: 0.4em;
+}
+
+/* ALBUMS PAGE */
+.albums-view {
+  margin: 3rem;
+}
+
+.album-cards {
+  display: grid;
+  gap: 4rem;
+  grid-auto-rows: 25rem;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+}
+
+.album-card {
+  min-height: 28.5em;
+  background-color: #4d4d4d;
+  border-radius: 0.8em;  
+  box-shadow: 0.3em 0.3em 0.7em rgba(0, 0, 0, 0.5);
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.album-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0.3em 0.3em 0.7em rgba(0, 0, 0, 0.3);
+}
+
+.album-card img {
+  width: 100%;
+  height: 75%;
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 0.8em;
+}
+
+.album-text p {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: white;
+  margin: 1em 0.7em 0 0.7em;
+  padding-top: 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link-tracks {
+  text-align: center;
+  background-color: #ef6867;
+  color: white;
+  padding: 0.2em 0;
+  margin: 0 5.5em;
+  border-radius: 0.4em;
+}
+
+/* TRACK PAGE */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #4d4d4d;
+  margin: 0.8rem 1.3rem;
+  padding: 0 7.5rem 0 1.5rem;
+  font-size: 1.1rem;
+  color: #A8A9A8;
+  height: 9%;
+}
+
+.nav h3 {
+  padding-top: 0.8rem;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.8rem 1.3rem;
+  background-color: #f1f3f4;
+}
+
+.title-song {
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding-left: 1.5em;
+  transform: translateY(0.4em);
+}
+
+.player {
+  display: flex;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color:#1DB954;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: rgba(45, 214, 104, 0.7);
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  font-weight: 600;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  color: #1DB954;
+  border-radius: 55px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
